@@ -2,6 +2,6 @@
 echo '{"version":1}'
 echo '['
 echo '[],'
-exec conky --config $HOME/.config/conky/.bottom_conky
+exec conky --config $HOME/.config/conky/bottom-status-bar-conky
 
 
