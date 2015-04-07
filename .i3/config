@@ -194,11 +194,11 @@ bindsym $mod+r mode "resize"
 ################
 
 bar {
-        status_command bash $HOME/.i3/statusline
+        status_command bash $HOME/.i3/top-status-bar
         position top
 		tray_output LVDS1
 		height 20
-			font pango: Source Code Pro for Powerline, FontAwesome 10
+			font pango: Source Code Pro, FontAwesome 10
         colors{
                 
                 separator #dcdcdc
@@ -211,11 +211,11 @@ bar {
 }
 
 bar {
-        status_command bash $HOME/.i3/bottom_statusline
+        status_command bash $HOME/.i3/bottom-status-bar
         position bottom
                 
                 height 20
-		font pango: Source Code Pro for Powerline, FontAwesome 10
+		font pango: Source Code Pro, FontAwesome 10
         }
 }
 
