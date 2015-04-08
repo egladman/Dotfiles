@@ -2,7 +2,7 @@
 # STARTUP PROGRAMS #
 ####################
 
-exec compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config ~/.config/compton.conf -b
+exec compton il --config ~/.config/compton.conf -b
 exec hsetroot -solid '#073642'
 #exec  feh --bg-scale ~/PATH/TO/FILE.jpg
 exec  xrdb -merge ~/.Xresources
