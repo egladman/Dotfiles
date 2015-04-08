@@ -3,7 +3,8 @@
 ####################
 
 exec compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config ~/.config/compton.conf -b
-#exec  feh --bg-scale ~/wallpapers/1.jpg
+exec hsetroot -solid '#073642'
+#exec  feh --bg-scale ~/PATH/TO/FILE.jpg
 exec  xrdb -merge ~/.Xresources
 
 
