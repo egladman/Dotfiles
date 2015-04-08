@@ -2,8 +2,8 @@
 # STARTUP PROGRAMS #
 ####################
 
-exec compton --config ~/.config/compton/compton.conf -b
-exec  feh --bg-scale ~/wallpapers/1.jpg
+#exec compton --config ~/.config/compton/compton.conf -b
+#exec  feh --bg-scale ~/wallpapers/1.jpg
 exec  xrdb -merge ~/.Xresources
 
 
@@ -34,7 +34,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu
-bindsym $mod+a exec dmenu_run -fn Source\ Code\ Pro\ for\ Powerline:pixelsize=13 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93A1A1' -h 20 -p command
+bindsym $mod+a exec dmenu_run -fn Source\ Code\ Pro:pixelsize=13 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93A1A1' -h 20 -p command
 
 
 ######################
@@ -196,28 +196,54 @@ bindsym $mod+r mode "resize"
 bar {
         status_command bash $HOME/.i3/top-status-bar
         position top
-		tray_output LVDS1
-		height 20
-			font pango: Source Code Pro, FontAwesome 10
+	
+	tray_output LVDS1
+	height 20
+	font pango: Source Code Pro, FontAwesome 10
+        
         colors{
+                #background color
+                background #002b36
                 
-                separator #dcdcdc
-
-                focused_workspace  #d64937 #d64937 #2d2d2d
-                active_workspace   #2d2d2d #2d2d2d #dcdcdc
-                inactive_workspace #2d2d2d #2d2d2d #dcdcdc
-                urgent_workspace   #2d2d2d #2d2d2d #dcdcdc
+                #font color
+                statusline #839496
+             	
+             	#divider color
+                separator #93a1a1
+                
+                #workspace indicators
+                focused_workspace #cb4b16 #cb4b16 #eee8d5
+                active_workspace #cb4b16 #cb4b16 #eee8d5
+                inactive_workspace #b58900 #b58900 #eee8d5
+		urgent_workspace #d33682 #d33682 #eee8d5
         }
 }
 
 bar {
         status_command bash $HOME/.i3/bottom-status-bar
         position bottom
+        
+	height 20
+	font pango: Source Code Pro, FontAwesome 10
+        
+        colors{
+                #background color
+                background #002b36
                 
-                height 20
-		font pango: Source Code Pro, FontAwesome 10
+                #font color
+                statusline #839496
+             	
+             	#divider color
+                separator #93a1a1
+                
+                #workspace indicators
+                focused_workspace #cb4b16 #cb4b16 #eee8d5
+                active_workspace #cb4b16 #cb4b16 #eee8d5
+                inactive_workspace #b58900 #b58900 #eee8d5
+		urgent_workspace #d33682 #d33682 #eee8d5
         }
 }
+        
 
 
 
@@ -229,9 +255,7 @@ bar {
 
 
 
-#bar {
-#        
-#
+
 #
 ##################
 ## DEFINE COLORS #
