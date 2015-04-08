@@ -197,7 +197,7 @@ bar {
         status_command bash $HOME/.i3/top-status-bar
         position top
 	
-	tray_output LVDS1
+	tray_output none
 	height 20
 	font pango: Source Code Pro, FontAwesome 10
         
@@ -223,6 +223,7 @@ bar {
         status_command bash $HOME/.i3/bottom-status-bar
         position bottom
         
+        tray_output none
 	height 20
 	font pango: Source Code Pro, FontAwesome 10
         
