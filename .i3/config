@@ -35,7 +35,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu
-bindsym $mod+a exec dmenu_run -fn Source\ Code\ Pro:pixelsize=13 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#93A1A1' -h 20 -p command
+bindsym $mod+a exec dmenu_run -fn Source\ Code\ Pro:pixelsize=13 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#b58900' -h 20 -p command
 
 
 ######################
