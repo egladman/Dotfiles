@@ -39,6 +39,10 @@ assign [class="Gimp"] gimp
 bindsym $mod+g workspace gimp
 for_window [title="GIMP Startup"] move workspace gimp
 
+# THUNAR
+for_window [class="Thunar"] floating enable; border 1pixel
+
+
 
 #####################
 #!!  KEYBINDINGS  !!#
