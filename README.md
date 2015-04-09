@@ -1,2 +1,2 @@
 # dotfiles
-My System Configuration Files for Linux
+My System Configuration Files for my Arch Linux Machines
