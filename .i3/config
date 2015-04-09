@@ -6,6 +6,8 @@ exec compton il --config ~/.config/compton.conf -b
 exec hsetroot -solid '#073642'
 #exec  feh --bg-scale ~/PATH/TO/FILE.jpg
 exec  xrdb -merge ~/.Xresources
+exec thunar --daemon
+
 
 
 new_window pixel 0
