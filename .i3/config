@@ -10,13 +10,34 @@ exec  xrdb -merge ~/.Xresources
 
 new_window pixel 0
 
+
+
 ##########################
 # EXPLICIT  WINDOW RULES #
 ##########################
 
-# HANGOUTS
+# POP-UP DIALOGS
 for_window [window_role="pop-up"] floating enable
-for_window [title="Hangouts"] move container to workspace 10
+
+# HANGOUTS
+for_window [title="Hangouts"] floating enable
+
+# CHROME
+for_window [title="Chrome"] border 1pixel
+
+# FIREFOX
+for_window [title="Firefox"] border 1pixel
+
+# LIGHT TABLE
+for_window [title="Light Table"] border 1pixel
+assign [class="Light Table"] lighttable
+bindsym $mod+t workspace lighttable
+for_window [title="Light Table"] move workspace lighttable
+
+# GIMP
+assign [class="Gimp"] gimp
+bindsym $mod+g workspace gimp
+for_window [title="GIMP Startup"] move workspace gimp
 
 
 #####################
