@@ -31,9 +31,6 @@ for_window [title="Firefox"] border 1pixel
 
 # LIGHT TABLE
 for_window [title="Light Table"] border 1pixel
-assign [class="Light Table"] lighttable
-bindsym $mod+t workspace lighttable
-for_window [title="Light Table"] move workspace lighttable
 
 # GIMP
 assign [class="Gimp"] gimp
