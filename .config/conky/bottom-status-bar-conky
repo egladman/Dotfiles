@@ -55,9 +55,9 @@ update_interval 0.01
 TEXT
 [
 
-#{ "full_text" : "${if_up wlp1s0}${wireless_link_qual_perc wlan0}% @ ${wireless_essid wlan0} ${addr wlan0}${else} down${endif}" , "color" : ${if_up wlan0} "\#00ff00"${else}"\#ff0000"${endif} },  
-#{ "full_text" : " ${if_up eth0}${addr eth0}  ${totaldown eth0}  ${totalup eth0}${else}down${endif}" , "color" : ${if_up eth0} "\#00ff00"${else}"\#ff0000"${endif} }, 
-#{ "full_text" : " ${execi ip addr show wlp1s0 | awk '$1 == "inet" {gsub(/\/.*$/, "", $2); print $2}' "},
-#{ "full_text" : " ${ip addr show wlp1s0 | awk '$1 == "inet" {gsub(/\/.*$/, "", $2); print $2}' "},
-{ "full_text" : " ${exec iwgetid -r}   "}],
+{ "full_text" : " ${if_up wlp1s0}${addr wlp1s0} "}, 
+
+{ "full_text" : " ${exec iwgetid -r}   "}
+
+],
 
