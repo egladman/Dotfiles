@@ -2,17 +2,16 @@
 # STARTUP PROGRAMS #
 ####################
 
-exec compton il --config ~/.config/compton.conf -b
+exec compton --config ~/.config/compton.conf -b
 exec hsetroot -solid '#073642'
-#exec  feh --bg-scale ~/PATH/TO/FILE.jpg
-exec  xrdb -merge ~/.Xresources
+#exec feh --bg-scale ~/PATH/TO/FILE.jpg
+exec xrdb -merge ~/.Xresources
 exec thunar --daemon
 
 
+new_window pixel 1
 
-new_window pixel 0
-
-
+popup_during_fullscreen smart
 
 ##########################
 # EXPLICIT  WINDOW RULES #
@@ -24,7 +23,7 @@ for_window [window_role="pop-up"] floating enable
 # HANGOUTS
 for_window [title="Hangouts"] floating enable
 
-# CHROME
+# CHROME 
 for_window [title="Chrome"] border 1pixel
 
 # FIREFOX
@@ -44,8 +43,6 @@ for_window [title="GIMP Startup"] move workspace gimp
 # THUNAR
 for_window [class="Thunar"] floating enable; border 1pixel
 
-
-
 #####################
 #!!  KEYBINDINGS  !!#
 #####################
@@ -56,7 +53,7 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -71,7 +68,7 @@ bindsym $mod+a exec dmenu_run -fn Source\ Code\ Pro:pixelsize=13 -nb '#002b36' -
 
 bindsym Mod1+F10         exec "amixer set Master 550+ unmute"
 bindsym Mod1+F9          exec "amixer set Master 550- unmute"
-bindsym Mod1+F8          exec "amixer -q sset Master,0 toggle"
+bindsym Mod1+F8          exec "amixer -q set Master,0 toggle"
 
 
 ####################
@@ -241,10 +238,12 @@ bar {
                 separator #93a1a1
                 
                 #workspace indicators
-                focused_workspace #cb4b16 #cb4b16 #eee8d5
-                active_workspace #cb4b16 #cb4b16 #eee8d5
-                inactive_workspace #b58900 #b58900 #eee8d5
-		urgent_workspace #d33682 #d33682 #eee8d5
+                
+                # colorclass        <border>      <bg>          <text>
+                focused_workspace 	#cb4b16       #cb4b16       #eee8d5
+                active_workspace 	#cb4b16       #cb4b16       #eee8d5
+                inactive_workspace 	#b58900       #b58900       #eee8d5
+                urgent_workspace 	#d33682       #d33682       #eee8d5
         }
 }
 
@@ -267,107 +266,22 @@ bar {
              	#divider color
                 separator #93a1a1
                 
-                #workspace indicators
-                focused_workspace #cb4b16 #cb4b16 #eee8d5
-                active_workspace #cb4b16 #cb4b16 #eee8d5
-                inactive_workspace #b58900 #b58900 #eee8d5
-		urgent_workspace #d33682 #d33682 #eee8d5
+                # colorclass        <border>      <bg>          <text>
+                focused_workspace   #cb4b16       #cb4b16       #eee8d5
+                active_workspace    #cb4b16       #cb4b16       #eee8d5
+                inactive_workspace  #b58900       #b58900       #eee8d5
+                urgent_workspace    #d33682       #d33682       #eee8d5
+
+
+
         }
 }
         
 
 
+font pango: Source Code Pro, FontAwesome 9
 
-
-
-
-
-
-
-
-
-
-#
-##################
-## DEFINE COLORS #
-##################
-#
-#colors {
-#    background $background
-#    statusline $color12
-#
-#    # colorclass        <border>      <bg>          <text>
-#    focused_workspace   $color04      $color04      $color07
-#    active_workspace    $color04      $background   $color07
-#    inactive_workspace  $background   $background   $color12
-#    urgent_workspace    $background   $background   $color02
-#  }
-#
-#  font            pango:Source Code Pro for Powerline 10
-#  position        bottom
-#}
-#
-#
-#########################
-##SOLARIZED COLOR THEME #
-#########################
-#
-#
-## black dark/light
-#set $color00    #073642
-#set $color08    #002B36
-## red dark/light
-#set $color01    #DC322F
-#set $color09    #CB4B16
-## green dark/light
-#set $color02    #859900
-#set $color10    #B3CD01
-## yellow dark/light
-#set $color03    #B58900
-#set $color11    #F4C32F
-## blue dark/light
-#
-##current workspace
-#set $color04    #073642
-#set $color12    #93A1A1
-## magenta dark/light
-#set $color05    #D33682
-#set $color13    #6C71C4
-## cyan dark/light
-#set $color06    #00AFFF
-#set $color14    #69B3AD
-## white dark/light
-#set $color07    #839496
-#set $color15    #FDF6E3
-## background
-##set $background #002b36
-#
-## Border style
-#new_window none
-#new_float  normal
-#
-## Client colors
-## colorclass            <border>      <bg>          <text>      
-#<indicator>
-#client.focused          $color04      $color04      $color07    $color02
-#client.focused_inactive $background   $background   $color07    $color02
-#client.unfocused        $background   $background   $color12    $color10
-#client.urgent           $background   $background   $color02    $color10
-#
-#}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# colorclass            <border>  <bg>      <text>      
+client.focused          #cb4b16   #cb4b16   #eee8d5
+client.focused_inactive #002b36   #002b36   #eee8d5
+client.unfocused        #073642   #073642   #839496
