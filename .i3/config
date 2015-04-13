@@ -7,9 +7,9 @@ exec hsetroot -solid '#073642'
 #exec feh --bg-scale ~/PATH/TO/FILE.jpg
 exec xrdb -merge ~/.Xresources
 exec thunar --daemon
+exec mpd
 
-
-new_window pixel 1
+new_window pixel 0
 
 popup_during_fullscreen smart
 
@@ -23,14 +23,14 @@ for_window [window_role="pop-up"] floating enable
 # HANGOUTS
 for_window [title="Hangouts"] floating enable
 
-# CHROME 
-for_window [title="Chrome"] border 1pixel
+## CHROME 
+#for_window [title="Chrome"] border 1pixel
 
-# FIREFOX
-for_window [title="Firefox"] border 1pixel
+## FIREFOX
+#for_window [title="Firefox"] border 1pixel
 
-# LIGHT TABLE
-for_window [title="Light Table"] border 1pixel
+## LIGHT TABLE
+#for_window [title="Light Table"] border 1pixel
 
 # GIMP
 assign [class="Gimp"] gimp
@@ -38,7 +38,7 @@ bindsym $mod+g workspace gimp
 for_window [title="GIMP Startup"] move workspace gimp
 
 # THUNAR
-for_window [class="Thunar"] floating enable; border 1pixel
+for_window [class="Thunar"] floating enable
 
 #####################
 #!!  KEYBINDINGS  !!#
@@ -224,6 +224,7 @@ bar {
 	height 20
 	font pango: Source Code Pro, FontAwesome 10
         
+
         colors{
                 #background color
                 background #002b36
@@ -280,5 +281,4 @@ font pango: Source Code Pro, FontAwesome 9
 
 # colorclass            <border>  <bg>      <text>      
 client.focused          #cb4b16   #cb4b16   #eee8d5
-client.focused_inactive #002b36   #002b36   #eee8d5
 client.unfocused        #073642   #073642   #839496
