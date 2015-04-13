@@ -46,7 +46,7 @@ override_utf8_locale no
 ## set to 1 to disable averaging
 cpu_avg_samples 2
 
-default_color FF0000
+default_color 93a1a1
 
 update_interval 0.01
 
@@ -55,9 +55,8 @@ update_interval 0.01
 TEXT
 [
 
-{ "full_text" : " ${if_up wlp1s0}${addr wlp1s0} "}, 
-
-{ "full_text" : " ${exec iwgetid -r}   "}
+{ "color" : "\#cb4b16", "separator":false, "full_text" : " ${if_up wlp1s0}${addr wlp1s0} "},\
+{ "color" : "\#839496", "separator":false, "full_text" : " ${exec iwgetid -r} "}\
 
 ],
 
