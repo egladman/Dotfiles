@@ -1,0 +1,93 @@
+ # MPD Settings
+
+   mpd_crossfade_time = "2"
+   mpd_music_dir = "~/Music"
+
+    
+ # Format
+   song_list_format = " $0%n $1• $8%t $R$0%A "
+   song_columns_list_format = " (100) {t} "
+   song_status_format = " $3%t $0 "
+   song_window_title_format = "%t"
+   now_playing_prefix = "$2>>"
+   progressbar_look = "---"
+   browser_playlist_prefix = "$2 ♥ $0 "
+   playlist_disable_highlight_delay = "0"
+   message_delay_time= "0"
+   startup_screen="9"
+
+ 
+
+
+
+
+
+
+################
+# COLOR SCHEME #
+################
+
+colors_enabled = "yes"
+
+
+#TAG
+empty_tag_color = "red"
+
+#WINDOW TITLE
+header_window_color = "white"
+
+#VOLUME
+volume_color = "red"
+
+#SELECTOR
+main_window_highlight_color = "yellow"
+
+#ACTIVE SELECTOR
+active_column_color = "red"
+
+#TRACK PROGRESSION
+progressbar_color = "black"  
+progressbar_elapsed_color = "red"
+
+#NOW PLAYING
+statusbar_color = "blue"
+
+#MAIN TEXT
+main_window_color = "white"
+
+#DIVIDER BELOW WINDOW TITLE
+state_line_color = "black"
+
+#MUSIC VISUALIZER
+visualizer_color = "black"
+
+state_flags_color = "default"
+
+
+
+
+
+
+ # Misc
+   
+   display_bitrate = "yes"
+   autocenter_mode = "yes"
+   centered_cursor = "yes"
+   titles_visibility = "no"
+   statusbar_visibility = "yes"
+   empty_tag_marker=" -- ‼ -- "
+ # ---   
+   mouse_support = "no"
+   header_visibility = "no"
+   display_remaining_time = "no"
+   display_screens_numbers_on_start = "no"
+   discard_colors_if_item_is_selected = "yes"
+   progressbar_boldness = "no"
+
+ # Visualizer
+   visualizer_sync_interval = "1"
+   visualizer_output_name = "Pipe"
+   visualizer_fifo_path = "/tmp/mpd.fifo"
+   visualizer_type = spectrum
+   visualizer_look = "●▮"
+
