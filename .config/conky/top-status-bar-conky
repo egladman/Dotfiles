@@ -64,7 +64,8 @@ update_interval 0.01
 
 TEXT
 [
-
+{ "color" : "\#859900", "separator":false, "full_text" : "  ${mpd_artist}"},\
+{ "color" : "\#859900", "separator":false, "full_text" : " ${mpd_title 25} "},\
 { "color" : "\#cb4b16", "separator":false, "full_text" : "    ${swap} / ${swapmax} "},\
 { "color" : "\#b58900", "separator":false, "full_text" : "    ${fs_used /} / ${fs_size}    ${fs_used /home} / ${fs_size /home} "},\
 { "color" : "\#6c71c4", "separator":false, "full_text" : "    ${battery_percent}% "},\
