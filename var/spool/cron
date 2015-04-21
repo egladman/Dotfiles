@@ -1,1 +1,2 @@
 15 * * * * python2 $HOME/.config/weather.py --format "{text}, {temp}°{unit_temperature}" 2383660 > /tmp/weather
+@reboot python2 $HOME/.config/weather.py --format "{text}, {temp}°{unit_temperature}" 2383660 > /tmp/weather
