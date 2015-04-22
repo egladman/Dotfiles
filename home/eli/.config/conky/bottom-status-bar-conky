@@ -56,13 +56,19 @@ if_up_strictness link
 TEXT
 [
 
-{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather}  ${exec cat /tmp/weather}${endif} "},\
+{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather Cloudy}  ${exec cat /tmp/weather}${endif}"},\
 
-{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up wlp1s0} ${addr wlp1s0}${endif} "},\
+{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather Sun}  ${exec cat /tmp/weather}${endif}"},\
 
-{ "color" : "\#839496", "separator":false, "full_text" : "${if_up wlp1s0} ${exec iwgetid -r}${endif} "},\
+{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather Rain}  ${exec cat /tmp/weather}${endif}"},\
 
-{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up enp0s20u1} ${addr enp0s20u1}${endif} "},\
+{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather Thunder}  ${exec cat /tmp/weather}${endif}"},\
+
+{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up wlp1s0} ${addr wlp1s0}${endif}"},\
+
+{ "color" : "\#839496", "separator":false, "full_text" : "${if_up wlp1s0} ${exec iwgetid -r}${endif}"},\
+
+{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up enp0s20u1} ${addr enp0s20u1}${endif}"},\
 
 { "color" : "\#839496", "separator":false, "full_text" : "${if_up enp0s20u1} ${exec iwgetid -r}${endif}"}\
 
