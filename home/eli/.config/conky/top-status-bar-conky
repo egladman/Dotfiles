@@ -15,7 +15,7 @@ double_buffer no
 background no
 
 ## Update interval in seconds
-update_interval 2.0
+update_interval 2
 
 ## This is the number of times Conky will update before quitting.
 ## Set to zero to run forever.
@@ -46,32 +46,41 @@ override_utf8_locale no
 ## set to 1 to disable averaging
 cpu_avg_samples 2
 
-
 default_color 93a1a1
 
-
-update_interval 0.01
-
-
-# Kernel:$kernel on $machine
-# Name: $nodename - $sysname
-#CPU ${cpu cpu1}% | \
-#RAM ${memperc}% | \
-
-#{ "color" : "\#859900", "full_text" : "${execi 300 curl --silent "http://xml.weather.yahoo.com/forecastrss/43140_f.xml" -o ~/.cache/weather.xml | grep -E '(C<BR)' | sed 's/,.*//g'} "},
+if_up_strictness link
 
 
 
 TEXT
 [
-{ "color" : "\#859900", "separator":false, "full_text" : "  ${mpd_artist}"},\
-{ "color" : "\#859900", "separator":false, "full_text" : " ${mpd_title 40} "},\
-{ "color" : "\#cb4b16", "separator":false, "full_text" : "    ${swap} / ${swapmax} "},\
-{ "color" : "\#b58900", "separator":false, "full_text" : "    ${fs_used /} / ${fs_size}    ${fs_used /home} / ${fs_size /home} "},\
-{ "color" : "\#6c71c4", "separator":false, "full_text" : "    ${battery_percent}% "},\
-{ "color" : "\#dc322f", "separator":false, "full_text" : "    ${exec ponymix get-volume}% "},\
-{ "color" : "\#268bd2", "separator":false, "full_text" : "     ${time %a %m-%d-%y} "},\
-{ "color" : "\#839496", "separator":false, "full_text" : "    ${time %l:%M:%S %p} "}\
+
+#MUSIC
+{ "color" : "\#859900", "separator":false, "full_text" : "           ${mpd_artist} - ${mpd_title 40}"},\
+
+#SWAP
+{ "color" : "\#cb4b16", "separator":false, "full_text" : "           ${swap} / ${swapmax}"},\
+
+#HDD SIZE
+{ "color" : "\#b58900", "separator":false, "full_text" : "           ${fs_used /} / ${fs_size}        ${fs_used /home} / ${fs_size /home}"},\
+
+#BATTERY
+{ "color" : "\#6c71c4", "separator":false, "full_text" : "          ${battery_percent}%"},\
+
+#VOLUME
+{ "color" : "\#dc322f", "separator":false, "full_text" : "${if_match "${exec ponymix | grep -A 2 output | grep -o Muted}" == "Muted"}      ${endif}"},\
+
+{ "color" : "\#dc322f", "separator":false, "full_text" : "${if_match "${exec ponymix get-volume}" < "50"}${if_match "${exec ponymix | grep -A 2 output | grep -o Muted}" != "Muted"}      ${endif}${endif}"},\
+
+{ "color" : "\#dc322f", "separator":false, "full_text" : "${if_match "${exec ponymix get-volume}" >= "50"}${if_match "${exec ponymix | grep -A 2 output | grep -o Muted}" != "Muted"}      ${endif}${endif}"},\
+
+{ "color" : "\#dc322f", "separator":false, "full_text" : "${exec ponymix get-volume}%"},\
+
+#DATE
+{ "color" : "\#268bd2", "separator":false, "full_text" : "           ${time %a %m-%d-%y}"},\
+
+#TIME
+{ "color" : "\#839496", "separator":false, "full_text" : "          ${time %l:%M %p}"}\
 
 ],
 
