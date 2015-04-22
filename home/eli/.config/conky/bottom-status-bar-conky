@@ -15,7 +15,7 @@ double_buffer no
 background no
 
 ## Update interval in seconds
-update_interval 2.0
+update_interval 2
 
 ## This is the number of times Conky will update before quitting.
 ## Set to zero to run forever.
@@ -48,7 +48,6 @@ cpu_avg_samples 2
 
 default_color 93a1a1
 
-update_interval 0.01
 
 if_up_strictness link
 
@@ -56,21 +55,20 @@ if_up_strictness link
 TEXT
 [
 
-{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather Cloudy}  ${exec cat /tmp/weather}${endif}"},\
+{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather Cloudy}           ${exec cat /tmp/weather}${endif}"},\
 
-{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather Sun}  ${exec cat /tmp/weather}${endif}"},\
+{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather Sun}           ${exec cat /tmp/weather}${endif}"},\
 
-{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather Rain}  ${exec cat /tmp/weather}${endif}"},\
+{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather Rain}           ${exec cat /tmp/weather}${endif}"},\
 
-{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather Thunder}  ${exec cat /tmp/weather}${endif}"},\
+{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather Thunder}           ${exec cat /tmp/weather}${endif}"},\
 
-{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up wlp1s0} ${addr wlp1s0}${endif}"},\
+{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up wlp1s0}${if_match "${addr wlp1s0}" != "No Address"}          ${addr wlp1s0}${endif}${endif}"},\
 
-{ "color" : "\#839496", "separator":false, "full_text" : "${if_up wlp1s0} ${exec iwgetid -r}${endif}"},\
+{ "color" : "\#839496", "separator":false, "full_text" : "${if_up wlp1s0}          ${exec iwgetid -r}${endif}"},\
 
-{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up enp0s20u1} ${addr enp0s20u1}${endif}"},\
+{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up enp0s20u1}${if_match "${addr enp0s20u1}" != "No Address"}         ${addr enp0s20u1}${endif}${endif}"},\
 
-{ "color" : "\#839496", "separator":false, "full_text" : "${if_up enp0s20u1} ${exec iwgetid -r}${endif}"}\
+{ "color" : "\#839496", "separator":false, "full_text" : "${if_up enp0s20u1}         ${exec iwgetid -r}${endif}"}\
 
 ],
-
