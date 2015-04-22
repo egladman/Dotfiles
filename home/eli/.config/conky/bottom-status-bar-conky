@@ -50,13 +50,21 @@ default_color 93a1a1
 
 update_interval 0.01
 
+if_up_strictness link
 
 
 TEXT
 [
-{ "color" : "\#859900", "separator":false, "full_text" : " ${exec cat /tmp/weather} "},\
-{ "color" : "\#cb4b16", "separator":false, "full_text" : " ${if_up wlp1s0}${addr wlp1s0} "},\
-{ "color" : "\#839496", "separator":false, "full_text" : " ${exec iwgetid -r} "}\
+
+{ "color" : "\#859900", "separator":false, "full_text" : "  ${exec cat /tmp/weather} "},\
+
+{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up wlp1s0} ${addr wlp1s0}${endif} "},\
+
+{ "color" : "\#839496", "separator":false, "full_text" : "${if_up wlp1s0} ${exec iwgetid -r}${endif} "},\
+
+{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up enp0s20u1} ${addr enp0s20u1}${endif} "},\
+
+{ "color" : "\#839496", "separator":false, "full_text" : "${if_up enp0s20u1} ${exec iwgetid -r}${endif}"}\
 
 ],
 
