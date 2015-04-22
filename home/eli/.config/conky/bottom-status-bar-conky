@@ -56,7 +56,7 @@ if_up_strictness link
 TEXT
 [
 
-{ "color" : "\#859900", "separator":false, "full_text" : "  ${exec cat /tmp/weather} "},\
+{ "color" : "\#859900", "separator":false, "full_text" : "${if_existing /tmp/weather}  ${exec cat /tmp/weather}${endif} "},\
 
 { "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up wlp1s0} ${addr wlp1s0}${endif} "},\
 
