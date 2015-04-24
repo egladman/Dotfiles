@@ -21,7 +21,8 @@ popup_during_fullscreen smart
 for_window [window_role="pop-up"] floating enable
 
 # HANGOUTS
-for_window [title="Hangouts"] floating enable
+for_window [title="Hangouts"] floating enable, border none, move scratchpad
+bindsym $mod+minus scratchpad show
 
 ## CHROME 
 #for_window [title="Chrome"] border 1pixel
