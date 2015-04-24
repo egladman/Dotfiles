@@ -8,6 +8,8 @@ exec hsetroot -solid '#073642'
 exec xrdb -merge ~/.Xresources
 exec thunar --daemon
 exec mpd
+exec "ponymix set-volume 50"
+exec "ponymix mute"
 
 new_window pixel 0
 
