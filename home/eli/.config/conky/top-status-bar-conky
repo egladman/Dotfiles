@@ -56,7 +56,7 @@ TEXT
 [
 
 #MUSIC
-{ "color" : "\#859900", "separator":false, "full_text" : "           ${mpd_artist} - ${mpd_title 40}"},\
+{ "color" : "\#859900", "separator":false, "full_text" : "${if_match "${mpd_artist} - ${mpd_title 40}" != "(null) - (null)"}           ${mpd_artist} - ${mpd_title 40}${endif}"},\
 
 #SWAP
 { "color" : "\#cb4b16", "separator":false, "full_text" : "           ${swap} / ${swapmax}"},\
