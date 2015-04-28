@@ -67,10 +67,8 @@ TEXT
 
 { "color" : "\#839496", "separator":false, "full_text" : "${if_up wlp1s0}          ${exec iwgetid -r}${endif}"},\
 
-{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up enp0s20u1}${if_match "${addr enp0s20u1}" != "No Address"}         ${addr enp0s20u1}${endif}${endif}"},\
+{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up enp0s20u1}${if_match "${addr enp0s20u1}" != "No Address"}         ${addr enp0s20u1}${endif}${endif}"},\
 
-{ "color" : "\#839496", "separator":false, "full_text" : "${if_up enp0s20u1}         ${exec iwgetid -r}${endif}"},\
-
-{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up enp0s20u4}${if_match "${addr enp0s20u4}" != "No Address"}         ${addr enp0s20u4}${endif}${endif}"}\
+{ "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up enp0s20u4}${if_match "${addr enp0s20u4}" != "No Address"}         ${addr enp0s20u4}${endif}${endif}"}\
 
 ],

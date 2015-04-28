@@ -80,7 +80,7 @@ TEXT
 { "color" : "\#268bd2", "separator":false, "full_text" : "           ${time %a %m-%d-%y}"},\
 
 #TIME
-{ "color" : "\#839496", "separator":false, "full_text" : "          ${time %l:%M %p}"}\
+{ "color" : "\#839496", "separator":false, "full_text" : "          ${time %l:%M %p}"}\
 
 ],
 
