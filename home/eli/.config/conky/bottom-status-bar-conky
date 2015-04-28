@@ -15,7 +15,7 @@ double_buffer no
 background no
 
 ## Update interval in seconds
-update_interval 2
+update_interval 1
 
 ## This is the number of times Conky will update before quitting.
 ## Set to zero to run forever.
@@ -31,8 +31,6 @@ up?
 interface
 ## being solely up, being up and having link or being up, having 
 link
-## and an assigned IP address. 
-if_up_strictness address
 
 ## Add spaces to keep things from moving about?  This only affects 
 certain objects.

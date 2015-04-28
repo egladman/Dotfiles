@@ -31,13 +31,11 @@ up?
 interface
 ## being solely up, being up and having link or being up, having 
 link
-## and an assigned IP address. 
-if_up_strictness address
 
 ## Add spaces to keep things from moving about?  This only affects 
 certain objects.
 ## use_spacer should have an argument of left, right, or none
-use_spacer left
+use_spacer right
 
 ## Force UTF8? note that UTF8 support required XFT
 override_utf8_locale no
@@ -57,7 +55,7 @@ TEXT
 { "color" : "\#859900", "separator":false, "full_text" : "${if_match "${mpd_artist} - ${mpd_title 40}" != "(null) - (null)"}           ${mpd_artist} - ${mpd_title 40}${endif}"},\
 
 #SWAP
-{ "color" : "\#cb4b16", "separator":false, "full_text" : "           ${swap} / ${swapmax}"},\
+{ "color" : "\#cb4b16", "separator":false, "full_text" : "           ${swapperc}"},\
 
 #HDD SIZE
 { "color" : "\#b58900", "separator":false, "full_text" : "           ${fs_used /} / ${fs_size}        ${fs_used /home} / ${fs_size /home}"},\
