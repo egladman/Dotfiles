@@ -64,8 +64,10 @@ TEXT
 #HDD SIZE
 { "color" : "\#b58900", "separator":false, "full_text" : "           ${fs_used /} / ${fs_size}        ${fs_used /home} / ${fs_size /home}"},\
 
-#BATTERY
-{ "color" : "\#6c71c4", "separator":false, "full_text" : "          ${battery_percent}%"},\
+#BATTERY 
+{ "color" : "\#6c71c4", "separator":false, "full_text" : "${if_match "${exec cat /sys/class/power_supply/BAT0/status}" == "Charging"}          ${battery_percent}%${endif}"},\
+
+{ "color" : "\#6c71c4", "separator":false, "full_text" : "${if_match "${exec cat /sys/class/power_supply/BAT0/status}" == "Discharging"}          ${battery_percent}%${endif}"},\
 
 #VOLUME
 { "color" : "\#dc322f", "separator":false, "full_text" : "${if_match "${exec ponymix | grep -A 2 output | grep -o Muted}" == "Muted"}      ${endif}"},\
@@ -83,11 +85,3 @@ TEXT
 { "color" : "\#839496", "separator":false, "full_text" : "          ${time %l:%M %p}"}\
 
 ],
-
-
-
-
-
-
-
-
