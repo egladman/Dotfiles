@@ -55,7 +55,7 @@ TEXT
 { "color" : "\#859900", "separator":false, "full_text" : "${if_match "${mpd_artist} - ${mpd_title 40}" != "(null) - (null)"}           ${mpd_artist} - ${mpd_title 40}${endif}"},\
 
 #SWAP
-{ "color" : "\#cb4b16", "separator":false, "full_text" : "           ${swapperc}"},\
+{ "color" : "\#cb4b16", "separator":false, "full_text" : "           ${swapperc}%"},\
 
 #HDD SIZE
 { "color" : "\#b58900", "separator":false, "full_text" : "           ${fs_used /} / ${fs_size}        ${fs_used /home} / ${fs_size /home}"},\
