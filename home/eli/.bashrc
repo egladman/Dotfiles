@@ -8,6 +8,11 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
+#RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# RVM bash completion
+[[ -r "$HOME/.rvm/scripts/completion" ]] && source "$HOME/.rvm/scripts/completion"
 
 # If not running interactively, do not do anything
 #[[ $- != *i* ]] && return
