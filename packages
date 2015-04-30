@@ -22,10 +22,19 @@ gimp
 wicd
 wicd-gtk
 steam
+pulseaudio
+xf86-video-intel
+mesa
+mesa-libgl
+lib32-mesa-libgl
+libva-intel-driver
+libva
 
 ##############
 #AUR Packages#
 ##############
+
+arduino
 htop-solarized
 compton-git
 i3-gaps
@@ -33,6 +42,7 @@ ttf-font-awesome
 figlet-fonts
 ttf-opensans
 lighttable
+steam-fonts
 
 ################
 #Python Modules#
