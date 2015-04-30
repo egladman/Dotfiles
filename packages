@@ -3,7 +3,9 @@
 ####################
 
 adobe-source-code-pro-fonts
+git
 xorg
+xorg-xinit
 gvfs
 hsetroot
 feh
@@ -17,6 +19,9 @@ openssh
 figlet
 inkscape
 gimp
+wicd
+wicd-gtk
+steam
 
 ##############
 #AUR Packages#

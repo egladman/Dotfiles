@@ -2,5 +2,6 @@
 
 cd /home
 cp -rv ~/Dotfiles/home /
-cd /var
-cp -rv ~/Dotfiles/var /
+cd $HOME
+#cd /var
+#cp -rv ~/Dotfiles/var /
