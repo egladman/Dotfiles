@@ -1,0 +1,37 @@
+####################
+#Arch Repo Packages#
+####################
+
+adobe-source-code-pro-fonts
+xorg
+gvfs
+hsetroot
+feh
+ponymix
+mpd
+ncmpcpp
+python2-pip
+exfat-utils
+fuse-exfat
+openssh
+figlet
+inkscape
+gimp
+
+##############
+#AUR Packages#
+##############
+htop-solarized
+compton-git
+i3-gaps
+ttf-font-awesome
+figlet-fonts
+ttf-opensans
+lighttable
+
+################
+#Python Modules#
+################
+
+BeautifulSoup4
+requests
