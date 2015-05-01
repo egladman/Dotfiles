@@ -29,6 +29,11 @@ mesa-libgl
 lib32-mesa-libgl
 libva-intel-driver
 libva
+vlc
+libnotify
+python-pygments
+python2-pygments
+nodejs
 
 ##############
 #AUR Packages#
@@ -50,3 +55,10 @@ steam-fonts
 
 BeautifulSoup4
 requests
+
+######
+#Gems#
+######
+
+execjs
+jekyll
