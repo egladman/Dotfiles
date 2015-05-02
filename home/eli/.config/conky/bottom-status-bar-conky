@@ -67,12 +67,12 @@ TEXT
 
 { "color" : "\#cb4b16", "separator":false, "full_text" : "${if_up enp0s20u4}${if_match "${addr enp0s20u4}" != "No Address"}         ${addr enp0s20u4}${endif}${endif}"},\
 
-{ "color" : "\#b58900", "separator":false, "full_text" : "${if_up wlp1s0}       ${upspeedf wlp1s0}KiB"},\
+{ "color" : "\#b58900", "separator":false, "full_text" : "${if_up wlp1s0}${if_match "${addr enp0s20u4}" != "No Address"}       ${upspeedf wlp1s0}KiB${endif}"},\
+ 
+{ "color" : "\#b58900", "separator":false, "full_text" : "${if_up wlp1s0}${if_match "${addr enp0s20u4}" != "No Address"}       ${downspeedf wlp1s0}KiB${endif}"},\
 
-{ "color" : "\#b58900", "separator":false, "full_text" : "${if_up wlp1s0}       ${downspeedf wlp1s0}KiB"},\
-
-{ "color" : "\#839496", "separator":false, "full_text" : "${if_up wlp1s0}          ${exec iwgetid -r}${endif}"},\
-
+{ "color" : "\#839496", "separator":false, "full_text" : "${if_up wlp1s0}${if_match "${addr wlp1s0}" != "No Address"}          ${exec iwgetid -r}${endif}${endif}"},\
+${if_match "${addr wlp1s0}" != "No Address"}
 { "color" : "\#839496", "separator":false, "full_text" : "${if_up enp0s20u4}          ${echo 'wired'}${endif}"}\
 
 ],
