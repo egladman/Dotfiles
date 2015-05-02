@@ -71,7 +71,7 @@ TEXT
 
 { "color" : "\#b58900", "separator":false, "full_text" : "${if_up wlp1s0}       ${downspeedf wlp1s0}KiB"},\
 
-{ "color" : "\#839496", "separator":false, "full_text" : "${if_up wlp1s0}          ${exec iwgetid -r}${endif}"}\
+{ "color" : "\#839496", "separator":false, "full_text" : "${if_up wlp1s0}          ${exec iwgetid -r}${endif}"},\
 
 { "color" : "\#839496", "separator":false, "full_text" : "${if_up enp0s20u4}          ${echo 'wired'}${endif}"}\
 
