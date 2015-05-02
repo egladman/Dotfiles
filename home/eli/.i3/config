@@ -62,6 +62,13 @@ bindsym $mod+Shift+q kill
 bindsym $mod+a exec dmenu_run -fn Source\ Code\ Pro:pixelsize=13 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#b58900' -h 20 -p command
 
 
+###################################
+#!!  SCREEN-CAPTURE KEYBINDING  !!#
+###################################
+
+bindsym $mod+equal exec "maim -i $(xdotool getactivewindow) --hidecursor ~/Pictures/Screenshots/$(date +%F-%T).png"
+
+
 ######################
 # VOLUME KEYBINDINGS #
 ######################

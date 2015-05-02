@@ -34,6 +34,8 @@ libnotify
 python-pygments
 python2-pygments
 nodejs
+xdotool
+maim
 
 ##############
 #AUR Packages#
@@ -48,6 +50,7 @@ figlet-fonts
 ttf-opensans
 lighttable
 steam-fonts
+energia
 
 ################
 #Python Modules#
