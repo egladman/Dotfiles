@@ -36,6 +36,10 @@ python2-pygments
 nodejs
 xdotool
 maim
+inkscape
+unrar
+xarchiver
+
 
 ##############
 #AUR Packages#
@@ -51,6 +55,8 @@ ttf-opensans
 lighttable
 steam-fonts
 energia
+caffeine-ng
+twmn-git
 
 ################
 #Python Modules#

@@ -23,7 +23,7 @@ total_run_times 0
 
 ## Shortens units to a single character (kiB->k, GiB->G, etc.). 
 Default is off.
-short_units yes
+short_units no
 
 ## How strict should if_up be when testing an interface for being 
 up?

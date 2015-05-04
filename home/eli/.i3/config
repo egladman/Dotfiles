@@ -3,13 +3,15 @@
 ####################
 
 exec compton --config ~/.config/compton.conf -b
-exec hsetroot -solid '#073642'
-#exec feh --bg-scale ~/PATH/TO/FILE.jpg
+#exec hsetroot -solid '#073642'
+exec feh --bg-scale ~/.config/evolution.png
 exec xrdb -merge ~/.Xresources
 exec thunar --daemon
 exec mpd
 exec "ponymix set-volume 50"
 exec "ponymix mute"
+exec "caffeine &"
+exec "twmnd &"
 
 new_window pixel 0
 
@@ -66,7 +68,7 @@ bindsym $mod+a exec dmenu_run -fn Source\ Code\ Pro:pixelsize=13 -nb '#002b36' -
 #!!  SCREEN-CAPTURE KEYBINDING  !!#
 ###################################
 
-bindsym $mod+equal exec "maim -i $(xdotool getactivewindow) --hidecursor ~/Pictures/Screenshots/$(date +%F-%T).png"
+bindsym $mod+equal exec "maim -i $(xdotool getactivewindow) --hidecursor        ~/Pictures/Screenshots/$(date +%F-%T).png"
 
 
 ######################
@@ -109,7 +111,7 @@ bindsym Control+XF86PowerOff exec "oblogout"
 # WINDOW GAPS #
 ###############
 
-gaps inner 12
+gaps inner 20
 gaps outer 8
 
 
