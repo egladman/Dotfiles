@@ -80,5 +80,5 @@ jekyll
 #Patches#
 #########
 
-sed -i 's/df253f/666666/' /usr/share/themes/iris-light/gtk-2.0/gtkrc
-sed -i 's/df253f/666666/' /usr/share/themes/iris-light/gtk-3.0/gtk.css
+sed -i 's/df253f/268bd2/' /usr/share/themes/iris-light/gtk-2.0/gtkrc
+sed -i 's/df253f/268bd2/' /usr/share/themes/iris-light/gtk-3.0/gtk.css
