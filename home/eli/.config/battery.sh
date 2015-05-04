@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "$Battery" -le 79 ]]
+if [[ "$Battery" -le 20 ]]
 then
 
 twmnc -c  'Battery Low'
