@@ -19,17 +19,12 @@ exec "/usr/bin/xscreensaver -no-splash &"
 exec "devmon &"
 exec "urxvtd -q -f -o"
 exec "xrdb -merge ~/.Xresources"
-exec "xbacklight -set 50"
 
 
-
-set $mod Mod4
 
 new_window pixel 0
 
 popup_during_fullscreen smart
-
-workspace_auto_back_and_forth yes
 
 ##########################
 # EXPLICIT  WINDOW RULES #
@@ -57,36 +52,25 @@ for_window [class="Pavucontrol"] floating enable, floating_maximum_size 500 x -1
 # XARCHIVER
 for_window [class="Xarchiver"] floating enable
 
-# WICD
-for_window [class="Wicd"] floating enable, floating_maximum_size -1 x 400
 
-# OBLOGOUT
-for_window [class="Oblogout"] floating enable
+#####################
+#!!  KEYBINDINGS  !!#
+#####################
 
-
-##############################
-#!!  LAUNCHER KEYBINDINGS  !!#
-##############################
-
+set $mod Mod4
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# urxvt
-bindsym $mod+Return exec "urxvt -pixmap '/home/eli/.config/shebang.png;style=aspect-stretched:20x20+50+50'"
+# start a terminal
+bindsym $mod+Return exec "urxvt -pixmap '/home/eli/.config/shebangc.png;style=aspect-stretched'"
+
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# dmenu
+# start dmenu
 bindsym $mod+a exec dmenu_run -fn Source\ Code\ Pro:pixelsize=13 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#b58900' -h 20 -p command
-
-# wicd
-bindsym $mod+i exec wicd-gtk
-bindsym $mod+Shift+i exec "urxvt -e wicd-curses"
-
-# thunar
-bindsym $mod+b exec thunar
 
 
 ###################################
@@ -100,54 +84,36 @@ bindsym $mod+equal exec maim -i $(xdotool getactivewindow) --hidecursor ~/Pictur
 # VOLUME KEYBINDINGS #
 ######################
 
-bindsym Mod1+F10         exec "ponymix -c Master increase 5 && ponymix -c Master unmute"
-bindsym Mod1+F9          exec "ponymix -c Master decrease 5 && ponymix -c Master unmute"
-bindsym Mod1+F8          exec "ponymix -c Master toggle"
+bindsym Mod1+F10         exec "amixer set Master 550+ unmute"
+bindsym Mod1+F9          exec "amixer set Master 550- unmute"
+bindsym Mod1+F8          exec "amixer -q set Master,0 toggle"
 
 
 ###################
 # MPD KEYBINDINGS #
 ###################
 
-bindsym Mod1+space       exec "mpc toggle && bash $HOME/.config/mpd/playback-status.sh"
-bindsym Mod1+Left        exec "mpc prev && twmnc -c  'Previous Track'"
-bindsym Mod1+Right       exec "mpc next && twmnc -c  'Next Track'"
-bindsym Mod1+p         exec "mpc random && bash $HOME/.config/mpd/random-status.sh"
-bindsym Mod1+o       exec "mpc repeat && bash $HOME/.config/mpd/repeat-status.sh"
+bindsym Mod1+space       exec "mpd toggle"
+bindsym Mod1+Left        exec "mpd next"
+bindsym Mod1+Right       exec "mpd prev"
 
 
 #################################
 # SCREEN BRIGHTNESS KEYBINDINGS #
 #################################
  
-bindsym Mod1+F6      exec "xbacklight -dec 10 -time 100"
-bindsym Mod1+F7      exec "xbacklight -inc 10 -time 100 && bash $HOME/.config/scripts/backlight.sh"
+bindsym Mod1+F6      exec "xbacklight -dec 10"
+bindsym Mod1+F7      exec "xbacklight -inc 10"
 
 #Delete Keybinding
 bindsym Mod1+BackSpace   exec "xvkbd -xsendevent -text '\[Delete]'"
 
 
-##################
-# LOGOUT PROMPT  #
-##################
+############################
+# LOGOUT PROMPT KEYBINDING #
+############################
 
-
-set $sysmenu "    [l] lock    [e] logout    [s] suspend    [h] hibernate    [r] reboot    [p] shutdown    "
-bindsym Control+XF86PowerOff      mode $sysmenu
-
-mode $sysmenu {
-    bindsym l exec --no-startup-id i3lock, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym p exec --no-startup-id systemctl poweroff, mode "default"
-
-    bindsym Return    mode "default"
-    bindsym Escape    mode "default"
-}
-
-
+bindsym Control+XF86PowerOff exec "oblogout"
 
 
 ###############
@@ -204,10 +170,10 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+m focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
-bindsym $mod+n focus child
+#bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -279,7 +245,6 @@ bar {
 	height 20
 	font pango: Source Code Pro, FontAwesome 10
         
-	binding_mode_indicator no
 
         colors{
                 #background color
@@ -324,7 +289,7 @@ bar {
                 focused_workspace   #cb4b16       #cb4b16       #eee8d5
                 active_workspace    #cb4b16       #cb4b16       #eee8d5
                 inactive_workspace  #b58900       #b58900       #eee8d5
-                urgent_workspace    #6c71c4       #6c71c4       #eee8d5
+                urgent_workspace    #d33682       #d33682       #eee8d5
 
 
 

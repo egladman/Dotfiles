@@ -11,6 +11,7 @@ hsetroot
 feh
 ponymix
 mpd
+mpc
 ncmpcpp
 python2-pip
 exfat-utils
@@ -39,6 +40,34 @@ maim
 inkscape
 unrar
 xarchiver
+thunar-volman
+raw-thumbnailer
+tumbler
+thunar-archive-plugin
+ffmpegthumbnailer
+gvfs-afp
+gvfs-mtp
+gvfs-smb
+gvfs-gphoto2
+udisks2
+freetype2
+libgsf
+evince
+sshfs
+uucp
+ntp
+ntfs-3g
+udevil
+udisks2
+dosfstools
+abcde
+cdparanoia
+pulseaudio-alsa
+lib32-libpulse
+lib32-alsa-plugins
+oblogout
+urxvt pixbuf
+i3lock
 
 
 ##############
@@ -46,6 +75,10 @@ xarchiver
 ##############
 
 arduino
+perl-musicbrainz-discid
+perl-webservice-musicbrainz
+python-discid
+python2-discid
 htop-solarized
 compton-git
 i3-gaps
@@ -60,6 +93,9 @@ twmn-git
 powerline-fonts-git
 gtk-theme-iris-light-git
 vibrancy-colors
+thunar-shares-plugin
+cutecom
+zeal
 
 ################
 #Python Modules#

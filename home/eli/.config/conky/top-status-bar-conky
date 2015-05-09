@@ -68,11 +68,15 @@ TEXT
 #VOLUME
 { "color" : "\#dc322f", "separator":false, "full_text" : "${if_match "${exec ponymix | grep -A 2 output | grep -o Muted}" == "Muted"}      ${endif}"},\
 
-{ "color" : "\#dc322f", "separator":false, "full_text" : "${if_match "${exec ponymix get-volume}" < "50"}${if_match "${exec ponymix | grep -A 2 output | grep -o Muted}" != "Muted"}      ${endif}${endif}"},\
+{ "color" : "\#dc322f", "separator":false, "full_text" : "${if_match "${exec ponymix get-volume}" < "50"}${if_match "${exec ponymix get-volume}" != "100"}${if_match "${exec ponymix | grep -A 2 output | grep -o Muted}" != "Muted"}      ${endif}${endif}${endif}"},\
 
-{ "color" : "\#dc322f", "separator":false, "full_text" : "${if_match "${exec ponymix get-volume}" >= "50"}${if_match "${exec ponymix | grep -A 2 output | grep -o Muted}" != "Muted"}      ${endif}${endif}"},\
+{ "color" : "\#dc322f", "separator":false, "full_text" : "${if_match "${exec ponymix get-volume}" >= "50"}${if_match "${exec ponymix | grep -A 2 output | grep -o Muted}" != "Muted"}     ${endif}${endif}"},\
 
-{ "color" : "\#dc322f", "separator":false, "full_text" : "${exec ponymix get-volume}%"},\
+{ "color" : "\#dc322f", "separator":false, "full_text" : "${if_match "${exec ponymix get-volume}" == "100"}${if_match "${exec ponymix | grep -A 2 output | grep -o Muted}" != "Muted"}     ${endif}${endif}"},\
+
+{ "color" : "\#dc322f", "separator":false, "full_text" : "${if_match "${exec ponymix get-volume}" <= "0"}${exec echo '-'}${endif}"},\
+
+{ "color" : "\#dc322f", "separator":false, "full_text" : "${if_match "${exec ponymix get-volume}" != "0"}${exec ponymix get-volume}%${endif}"},\
 
 #DATE
 { "color" : "\#268bd2", "separator":false, "full_text" : "           ${time %a %m-%d-%y}"},\
