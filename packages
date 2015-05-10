@@ -68,6 +68,7 @@ lib32-alsa-plugins
 oblogout
 urxvt pixbuf
 i3lock
+imagemagick
 
 
 ##############
@@ -96,6 +97,8 @@ vibrancy-colors
 thunar-shares-plugin
 cutecom
 zeal
+xss-lock
+
 
 ################
 #Python Modules#

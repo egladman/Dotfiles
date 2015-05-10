@@ -4,7 +4,7 @@
 
 exec compton --config ~/.config/compton.conf -b
 #exec hsetroot -solid '#073642'
-exec feh --bg-scale ~/.config/evolution.png
+exec feh --bg-scale $HOME/.config/evolution.png
 exec xrdb -merge ~/.Xresources
 exec thunar --daemon
 exec mpd
@@ -15,12 +15,14 @@ exec "caffeine &"
 exec "twmnd &"
 #amixer -c 2 set PCM 100%
 exec amixer -c 0 set Master 100%
-exec "/usr/bin/xscreensaver -no-splash &"
+#exec "/usr/bin/xscreensaver -no-splash &"
 exec "devmon &"
 exec "urxvtd -q -f -o"
 exec "xrdb -merge ~/.Xresources"
 exec "xbacklight -set 50"
+exec "xss-lock -- i3lock -u -i $HOME/.config/evolution.png &"
 
+#exec "xautolock -time 10 -locker i3lock -u -c 000000"
 
 
 set $mod Mod4
@@ -30,6 +32,8 @@ new_window pixel 0
 popup_during_fullscreen smart
 
 workspace_auto_back_and_forth yes
+
+bindsym $mod+u [urgent=latest] focus
 
 ##########################
 # EXPLICIT  WINDOW RULES #
@@ -67,7 +71,6 @@ for_window [class="Oblogout"] floating enable
 ##############################
 #!!  LAUNCHER KEYBINDINGS  !!#
 ##############################
-
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -136,7 +139,7 @@ set $sysmenu "    [l] lock    [e] logout    [s] suspend    [h] hibernate    [r] 
 bindsym Control+XF86PowerOff      mode $sysmenu
 
 mode $sysmenu {
-    bindsym l exec --no-startup-id i3lock, mode "default"
+    bindsym l exec --no-startup-id i3lock -u -i $HOME/.config/evolution.png, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id systemctl suspend, mode "default"
     bindsym h exec --no-startup-id systemctl hibernate, mode "default"
