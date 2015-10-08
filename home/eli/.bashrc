@@ -8,6 +8,8 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
+alias mooltipass='google-chrome-stable --app-id=cdifokahonpfaoldibbjmbkdhhelblpj'
+
 #RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
