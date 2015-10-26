@@ -85,7 +85,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+a exec dmenu_run -fn Source\ Code\ Pro:pixelsize=13 -nb '#002b36' -nf '#839496' -sb '#073642' -sf '#b58900' -h 20 -p command
 
 # wicd
-bindsym $mod+i exec wicd-gtk
+bindsym $mod+i exec "kill $(ps aux | grep '[w]icd-client.py' | awk '{print $2}') && wicd-gtk"
 bindsym $mod+Shift+i exec "urxvt -e wicd-curses"
 
 # thunar
