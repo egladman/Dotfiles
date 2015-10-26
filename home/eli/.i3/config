@@ -18,9 +18,9 @@ exec amixer -c 0 set Master 100%
 #exec "/usr/bin/xscreensaver -no-splash &"
 exec "devmon &"
 exec "urxvtd -q -f -o"
-exec "xrdb -merge ~/.Xresources"
 exec "xbacklight -set 50"
 exec "--no-startup-id xss-lock -- i3lock -u -i $HOME/.config/evolution.png &"
+exec "xmodmap ~/.Xmodmap"
 
 #exec "xautolock -time 10 -locker i3lock -u -c 000000"
 
