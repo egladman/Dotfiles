@@ -107,15 +107,9 @@ moreutils
 #Python Modules#
 ################
 
+httpie
 BeautifulSoup4
 requests
-
-######
-#Gems#
-######
-
-execjs
-jekyll
 
 
 #########
