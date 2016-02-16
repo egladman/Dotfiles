@@ -103,6 +103,7 @@ bindsym $mod+Shift+backslash exec "urxvt -e emacs -nw"
 ###################################
 
 bindsym $mod+equal exec maim -i $(xdotool getactivewindow) --hidecursor ~/Pictures/Screenshots/$(date +%F-%T).png && twmnc -c  'Screen Captured'
+bindsym $mod+Shift+equal exec "thunar ~/Pictures/Screenshots"
 
 
 ######################
