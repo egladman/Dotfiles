@@ -90,6 +90,12 @@ bindsym $mod+Shift+i exec "urxvt -e wicd-curses"
 
 # thunar
 bindsym $mod+b exec thunar
+bindsym $mod+Shift+b exec exec "urxvt -e ranger"
+
+# emacs
+bindsym $mod+backslash exec emacs
+bindsym $mod+Shift+backslash exec "urxvt -e emacs -nw"
+
 
 
 ###################################
