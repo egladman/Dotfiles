@@ -4,7 +4,7 @@
 
 exec compton --config ~/.config/compton.conf -b
 #exec hsetroot -solid '#073642'
-exec feh --bg-scale $HOME/.config/evolution.png
+exec DISPLAY=0.0 feh --bg-scale $HOME/.config/evolution.png
 exec xrdb -merge ~/.Xresources
 exec thunar --daemon
 exec mpd
