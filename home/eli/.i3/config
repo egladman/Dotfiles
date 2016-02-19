@@ -62,7 +62,7 @@ for_window [class="Pavucontrol"] floating enable, floating_maximum_size 500 x -1
 for_window [class="Xarchiver"] floating enable
 
 # WICD
-for_window [class="Wicd"] floating enable, floating_maximum_size -1 x 400
+for_window [class="Wicd"] floating enable, floating_maximum_size -1 x 0
 
 # OBLOGOUT
 for_window [class="Oblogout"] floating enable
