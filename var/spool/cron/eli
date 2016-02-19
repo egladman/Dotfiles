@@ -1,3 +1,6 @@
 15 * * * * python2 $HOME/.config/weather.py --format "{text}, {temp}°{unit_temperature}" 2383660 > /tmp/weather
+15 * * * * echo $GH_NOTIFICATION_TOKEN | python $HOME/.config/notifications.py > /tmp/notifications
 @reboot sleep 30 && python2 $HOME/.config/weather.py --format "{text}, {temp}°{unit_temperature}" 2383660 > /tmp/weather
+@reboot sleep 30 && echo $GH_NOTIFICATION_TOKEN | python $HOME/.config/notifications.py > /tmp/notifications
 5 * * * * bash $HOME/.config/battery.sh
+
