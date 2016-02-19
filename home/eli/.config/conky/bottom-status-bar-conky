@@ -71,7 +71,7 @@ TEXT
  
 { "color" : "\#b58900", "separator":false, "full_text" : "${if_up wlp1s0}${if_match "${addr enp0s20u4}" != "No Address"}       ${downspeedf wlp1s0}KiB${endif}"},\
 
-{ "color" : "\#839496", "separator":false, "full_text" : "${if_up wlp1s0}${if_match "${addr wlp1s0}" != "No Address"}          ${exec iwgetid -r}${endif}${endif}"},\
+{ "color" : "\#839496", "separator":false, "full_text" : "${if_up wlp1s0}${if_match "${addr wlp1s0}" != "No Address"}          ${exec iwgetid -r | sed 's/\\/\\\\/g'${endif}${endif}"},\
 ${if_match "${addr wlp1s0}" != "No Address"}
 { "color" : "\#839496", "separator":false, "full_text" : "${if_up enp0s20u4}          ${echo 'wired'}${endif}"}\
 
