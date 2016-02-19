@@ -43,8 +43,8 @@ bindsym $mod+u [urgent=latest] focus
 for_window [window_role="pop-up"] floating enable
 
 # HANGOUTS
-for_window [title="Hangouts"] floating enable, border none, move scratchpad
-bindsym $mod+minus scratchpad show
+assign [class="google-chrome" title="Hangouts"] → Hangouts
+bindsym $mod+minus workspace Hangouts
 
 ## CHROME 
 #for_window [title="Chrome"] border 1pixel
