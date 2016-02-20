@@ -20,7 +20,7 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias c='clear'
 alias ports='netstat -tulanp'
-alias vi=emacs
+alias vi='emacs -nw'
 alias gpm="git push origin master"
 alias update='yaourt -Syu'
 alias nuke='killall -9'
