@@ -24,7 +24,6 @@ alias postman='google-chrome-stable --app-id=fdmmgilgnpjigdojojpjoooidkmcomcm'
 [[ -r "$HOME/.rvm/scripts/completion" ]] && source "$HOME/.rvm/scripts/completion"
 
 source /usr/share/git/completion/git-completion.bash
-source /usr/lib/python3.4/site-packages/powerline/bindings/bash/powerline.sh
 
 hostname | figlet -f smslant
 
