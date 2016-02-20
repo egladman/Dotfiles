@@ -25,7 +25,7 @@ alias gpm="git push origin master"
 alias update='yaourt -Syu'
 alias nuke='killall -9'
 alias repos='cd $HOME/Repositories'
-alias def='sdcv'
+alias def='$HOME/.config/dictionary.sh'
 
 PS1='[\u@\h \W]\$ '
 
