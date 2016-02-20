@@ -38,6 +38,9 @@ alias mooltipass='google-chrome-stable --app-id=cdifokahonpfaoldibbjmbkdhhelblpj
 # postman chrome app
 alias postman='google-chrome-stable --app-id=fdmmgilgnpjigdojojpjoooidkmcomcm'
 
+#NVM
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh 
+
 #RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
