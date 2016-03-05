@@ -25,6 +25,7 @@ alias update='yaourt -Syu'
 alias nuke='killall -9'
 alias repos='cd $HOME/Repositories'
 alias def='$HOME/.config/dictionary.sh'
+alias wtf='dmesg | tail'
 
 PS1='[\u@\h \W]\$ '
 
