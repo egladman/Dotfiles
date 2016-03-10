@@ -1,2 +1,5 @@
 clear Lock
 keycode 66 = Super_L
+
+keycode 111 = Up Prior Up
+keycode 116 = Down Next Down
